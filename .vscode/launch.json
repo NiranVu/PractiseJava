@@ -1,0 +1,77 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch AppTest",
+            "request": "launch",
+            "mainClass": "Homework.Buoi6.AppTest",
+            "projectName": "java_9edd051"
+        },
+        {
+            "type": "java",
+            "name": "Launch MainTestStudent",
+            "request": "launch",
+            "mainClass": "Homework.Buoi5.MainTestStudent",
+            "projectName": "java_9edd051"
+        },
+        {
+            "type": "java",
+            "name": "Launch mainRectangle",
+            "request": "launch",
+            "mainClass": "Homework.Buoi5.mainRectangle",
+            "projectName": "java_9edd051"
+        },
+        {
+            "type": "java",
+            "name": "Launch Baitap43",
+            "request": "launch",
+            "mainClass": "Homework.Buoi4.Baitap43",
+            "projectName": "java_9edd051"
+        },
+        {
+            "type": "java",
+            "name": "Launch Baitap42",
+            "request": "launch",
+            "mainClass": "Homework.Buoi4.Baitap42",
+            "projectName": "java_9edd051"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Baitap31",
+            "request": "launch",
+            "mainClass": "Homework.Buoi3.Baitap31",
+            "projectName": "java_9edd051"
+        },
+        {
+            "type": "java",
+            "name": "Launch Baitap32",
+            "request": "launch",
+            "mainClass": "Homework.Buoi3.Baitap32",
+            "projectName": "java_9edd051"
+        },
+        {
+            "type": "java",
+            "name": "Launch Baitap33",
+            "request": "launch",
+            "mainClass": "Homework.Buoi3.Baitap33",
+            "projectName": "java_9edd051"
+        },
+        {
+            "type": "java",
+            "name": "Launch Baitap41",
+            "request": "launch",
+            "mainClass": "Homework.Buoi4.Baitap41",
+            "projectName": "java_9edd051"
+        }
+    ]
+}
