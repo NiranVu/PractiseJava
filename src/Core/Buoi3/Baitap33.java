@@ -1,4 +1,4 @@
-package Homework.Buoi3;
+package Core.Buoi3;
 // Thiết kế chương trình tính tiền điện
 
 import java.util.Scanner;

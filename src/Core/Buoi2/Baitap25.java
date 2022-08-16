@@ -1,4 +1,4 @@
-package Homework.Buoi2;
+package Core.Buoi2;
 
 import java.util.Scanner;
 // Viết chương trình tính tích không được dùng dấu nhân

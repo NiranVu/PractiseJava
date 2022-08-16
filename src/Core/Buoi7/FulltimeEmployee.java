@@ -1,4 +1,4 @@
-package Homework.Buoi7;
+package Core.Buoi7;
 
 public class FulltimeEmployee extends Employee {
     long MEAL_ALLOWANCE = 2000000;  //Nhân viên chính thức được trợ cấp 2tr tiền ăn trưa

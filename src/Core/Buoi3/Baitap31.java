@@ -1,4 +1,4 @@
-package Homework.Buoi3;
+package Core.Buoi3;
 //Viết dãy số fibonanci
 
 import java.util.Scanner;

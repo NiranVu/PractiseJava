@@ -1,4 +1,4 @@
-package Homework.Buoi5;
+package Core.Buoi5;
 
 public class Rectangle {
 

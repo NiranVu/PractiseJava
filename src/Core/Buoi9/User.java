@@ -1,4 +1,4 @@
-package Homework.Buoi9;
+package Core.Buoi9;
 
 public class User {
     int id;

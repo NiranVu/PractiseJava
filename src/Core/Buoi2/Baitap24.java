@@ -1,4 +1,4 @@
-package Homework.Buoi2;
+package Core.Buoi2;
 
 import java.util.Scanner;
 // Nhập n từ bàn phím. Tính tổng từ 1 đến n sau đó tính trung bình

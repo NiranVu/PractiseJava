@@ -1,4 +1,4 @@
-package Homework.Buoi2;
+package Core.Buoi2;
 
 import java.util.Scanner;
 //Nhập n từ bàn phím. Tính bảng n * từ 1 đến 10

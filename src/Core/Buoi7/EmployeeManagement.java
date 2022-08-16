@@ -1,4 +1,4 @@
-package Homework.Buoi7;
+package Core.Buoi7;
 
 import java.util.Scanner;
 

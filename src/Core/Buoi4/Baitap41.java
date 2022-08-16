@@ -1,4 +1,4 @@
-package Homework.Buoi4;
+package Core.Buoi4;
 
 import java.util.Scanner;
 

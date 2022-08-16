@@ -1,4 +1,4 @@
-package Homework.Buoi2;
+package Core.Buoi2;
 
 import java.util.Scanner;
 //Nhập số từ bàn phím tính tổng hiệu chia phần nguyên, chia phần dư nha

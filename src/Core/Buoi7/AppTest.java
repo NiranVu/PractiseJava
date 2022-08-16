@@ -1,4 +1,4 @@
-package Homework.Buoi7;
+package Core.Buoi7;
 
 public class AppTest {
     public static void main(String[] args) {

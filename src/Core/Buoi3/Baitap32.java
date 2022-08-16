@@ -1,4 +1,4 @@
-package Homework.Buoi3;
+package Core.Buoi3;
 //Viết chương trình chuyển số thập phân ra số nhị phân
 
 

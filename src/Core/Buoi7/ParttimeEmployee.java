@@ -1,4 +1,4 @@
-package Homework.Buoi7;
+package Core.Buoi7;
 
 public class ParttimeEmployee extends Employee {
     long MEAL_ALLOWANCE = 0;

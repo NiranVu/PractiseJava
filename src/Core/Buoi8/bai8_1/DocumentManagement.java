@@ -1,4 +1,4 @@
-package Homework.Buoi8.bai8_1;
+package Core.Buoi8.bai8_1;
 
 import java.util.ArrayList;
 import java.util.List;
