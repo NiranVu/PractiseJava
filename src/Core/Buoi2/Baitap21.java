@@ -6,9 +6,9 @@ public class Baitap21 {
     public static void main(String[] args) {
         //Nhập 2 số a và b
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Nhap so a = ");
+        System.out.print("Nhap so a = ");
         int a = scanner.nextInt();
-        System.out.println("Nhap so b = ");
+        System.out.print("Nhap so b = ");
         int b = scanner.nextInt();
         //Bắt đầu tính
         int sum = a + b;
