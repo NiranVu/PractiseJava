@@ -20,5 +20,12 @@ public class Newspaper extends Document {
         this.dayIssue = dayIssue;
     }
 
-    
+    @Override
+    public String toString() {
+        return "id: " + id +
+                ", publisher: " + publisher +
+                ", release number: " + releaseNum +
+                ", daily number: " + dayIssue
+        ;
+    }
 }

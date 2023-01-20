@@ -3,11 +3,19 @@ package Core.Buoi6;
 import java.util.Scanner;
 
 public class StoreManagement extends Store {
-    int totalStore; //tổng số cửa hàng cần quản lý
-    Store[] stores; //danh sách cửa hàng
+
+    // 3.1 Các thuộc tính:
+    // - int n; (Tổng số cửa hàng cần quản lý).
+    // - Store[] stores; (Danh sách các cửa hàng).
+    // 3.2 Các phương thức:
+    // - Khởi tạo.
+    // - Ghi đè lại toString để trả về thông tin chi tiết các cửa hàng.
+    // - Tính tổng tất cả các điện thoại có Bluetooth/5G/Wifi.
+
+    int totalStore; //Total the number of store
+    Store[] stores; //List of store
 
     public StoreManagement() {};
-
     public StoreManagement(int totalStore) {
         this.totalStore = totalStore;
         stores = new Store[totalStore];
@@ -24,13 +32,13 @@ public class StoreManagement extends Store {
     public Store[] addStores() {
         for (int i = 0; i < stores.length; i++) {
             Scanner scr = new Scanner(System.in);
-            System.out.print("Nhập tên cửa hàng: ");
+            System.out.print("Input the name of store: ");
             String nameStore = scr.nextLine();
 
-            System.out.print("Nhập địa chỉ cửa hàng: ");
+            System.out.print("Input the address of store: ");
             String addressStore = scr.nextLine();
 
-            System.out.print("tổng số loại điện thoại: ");
+            System.out.print("Input total phones: ");
             int totalPhone = scr.nextInt();
 
             scr.nextLine();
@@ -64,7 +72,7 @@ public class StoreManagement extends Store {
         int totalHas = 0;
         for (Store i : stores) {
             for (SmartPhone j : i.phones) {
-                if(j.isHasBuetooth() == true && j.isHas5G() == true && j.isHasWifi() == true) {
+                if(j.getHasBluetooth() == true && j.getHas5G() == true && j.getHasWifi() == true) {
                     totalHas++;
                 }
             }

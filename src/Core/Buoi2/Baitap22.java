@@ -3,13 +3,19 @@ package Core.Buoi2;
 import java.util.Scanner;
 // Nhập số từ bàn phím tính n + nn + nnn
 public class Baitap22 {
+
+    // Write a Java program that accepts an integer (n) and computes the value of n + nn + nnn
+    // Input: User input a number n
+    // Output: Print result of operation: n + nn + nnn = ?
+
     public static void main(String[] args) {
-        //Nhập số n từ bàn phím
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Nhập số n = ");
-        int n = scanner.nextInt();
-        //Bắt đầu tính toán
+        //Input n and a
+        Scanner scr = new Scanner(System.in);
+        System.out.println("Input n = ");
+        int n = scr.nextInt();
+
+        //Calculate
         int output_ = n + n * n + n * n * n;
-        System.out.println("Kết quả = " + output_);
+        System.out.println("Result = " + output_);
     }
 }

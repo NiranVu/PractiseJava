@@ -3,13 +3,23 @@ package Core.Buoi6;
 import java.util.Scanner;
 
 public class Store extends SmartPhone {
+
+    // 2.1 Các thuộc tính:
+    // - String name; (Tên cửa hàng).
+    // - String address; (Địa chỉ cửa hàng).
+    // - int n; (Tổng số điện thoại có trong của hàng).
+    // - SmartPhone[] phones; (Mảng danh sách các điện thoại có trong cửa hàng).
+    // 2.2 Các phương thức:
+    // - Khởi tạo, getter/setters.
+    // - Tính tổng số lượng điện thoại bán được.
+    // - Tính tổng doanh thu.
+
     private String nameStore;
     private String addressStore;
-    private int totalPhone; //tổng số điện thoại có trong cửa hàng
-    SmartPhone[] phones; //chứa các điện thoại có trong cửa hàng
+    private int totalPhone; //Total the number of phones in store
+    SmartPhone[] phones; //List of phones in store
 
     public Store() {};
-
     public Store(String nameStore, String addressStore, int totalPhone) {
         this.nameStore = nameStore;
         this.addressStore = addressStore;
@@ -20,7 +30,6 @@ public class Store extends SmartPhone {
     public String getNameStore() {
         return nameStore;
     }
-
     public void setNameStore(String nameStore) {
         this.nameStore = nameStore;
     }
@@ -28,13 +37,11 @@ public class Store extends SmartPhone {
     public String getAddressStore() {
         return addressStore;
     }
-
     public void setAddressStore(String addressStore) {
         this.addressStore = addressStore;
     }
 
     public int getTotalPhone() {return totalPhone;}
-
     public void setTotalPhone(int totalPhone) {
 
         this.totalPhone = totalPhone;
@@ -43,50 +50,50 @@ public class Store extends SmartPhone {
     public SmartPhone[] addPhones() {
         for (int i = 0; i < totalPhone; i++) {
             Scanner scr = new Scanner(System.in);
-            System.out.print("Nhập branch: ");
+            System.out.print("Input branch: ");
             String branch = scr.nextLine();
 
-            System.out.print("Buetooth (true/false)? ");
+            System.out.print("Bluetooth (true/false): ");
             boolean hasBuetooth = scr.nextBoolean();
             if(hasBuetooth == true) {
-                System.out.println("Có buetooth");
+                System.out.println("Has bluetooth");
             } else {
-                System.out.println("Không có buetooth");
+                System.out.println("No has bluetooth");
             }
 
-            System.out.print("5G (true/false)? ");
+            System.out.print("5G (true/false): ");
             boolean has5G = scr.nextBoolean();
             if(has5G == true) {
-                System.out.println("Có 5G");
+                System.out.println("Has 5G");
             } else {
-                System.out.println("Không có 5G");
+                System.out.println("No has 5G");
             }
 
-            System.out.print("Wifi (true/false)? ");
+            System.out.print("Wifi (true/false): ");
             boolean hasWifi = scr.nextBoolean();
             if(hasWifi == true) {
-                System.out.println("Có wifi");
+                System.out.println("Has wifi");
             } else {
-                System.out.println("Không có wifi");
+                System.out.println("No has wifi");
             }
 
             scr.nextLine();
 
-            System.out.print("Os bao nhiêu (vd: Os15): ");
+            System.out.print("Os bao nhiêu (e.g.: Os15): ");
             String os = scr.nextLine();
 
-            System.out.print("Bộ nhớ bao nhiêu: ");
+            System.out.print("Memory: ");
             float memory = scr.nextFloat();
 
             scr.nextLine();
 
-            System.out.print("Màu gì: ");
+            System.out.print("Color: ");
             String color = scr.nextLine();
 
-            System.out.print("Giá bao nhiêu: ");
+            System.out.print("Price: ");
             long price = scr.nextLong();
 
-            System.out.print("Số lượng bán được bao nhiêu: ");
+            System.out.print("A number of sold: ");
             int totalSold = scr.nextInt();
 
             scr.nextLine();
@@ -96,11 +103,10 @@ public class Store extends SmartPhone {
         }
         return phones;
     }
-
+    
     public SmartPhone[] getPhones() {
         return phones;
     }
-
     public void setPhones(SmartPhone[] phones) {
         this.phones = phones;
     }
@@ -131,9 +137,9 @@ public class Store extends SmartPhone {
     public String toString() {
 
         return "Information of Stores{" +
-        "Name='" + getNameStore() + '\'' +
-        ", Address=" + getAddressStore() +
-        ", TotalPhone=" + getTotalPhone() +
-        '}';
+                "Name='" + nameStore + '\'' +
+                ", Address=" + addressStore +
+                ", TotalPhone=" + totalPhone +
+                '}';
     }
 }

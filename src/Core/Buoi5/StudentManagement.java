@@ -3,10 +3,22 @@ package Core.Buoi5;
 import java.util.Scanner;
 
 public class StudentManagement {
-    int totalStudent;
-    Student[] students;
 
-    //Khởi tạo
+    // - Các thuộc tính"
+    // + Tổng số sinh viên n.
+    // + Danh sách sinh viên (Student[] students).
+
+    // - Các phương thức:
+    // + Nhập vào thông tin từng sinh viên khi khởi tạo lớp.
+    // + Đếm tổng số sinh viên đỗ.
+    // + Đếm tổng số sinh viên trượt.
+    // + Tìm sinh viên có điểm gpa cao nhất.
+    // + Tìm sinh viên có điểm gpa thấp nhất.
+    
+    private int totalStudent;
+    private Student[] students;
+
+    //Constructor
     public StudentManagement() {}
     public StudentManagement(int totalStudent) {
         this.totalStudent = totalStudent;
@@ -22,12 +34,19 @@ public class StudentManagement {
     }
 
     public Student[] getStudents() {
+        return students;
+    }
+    public void setStudents(Student[] Students) {
+        
+    }
+
+    public Student[] inputStudent() {
         for (int i = 0; i < students.length; i++) {
             Scanner scr = new Scanner(System.in);
-            System.out.print("Nhập tên học sinh số " + (i + 1) + " là ");
+            System.out.print("Name of student " + (i + 1) + " is ");
             String name = scr.nextLine();
 
-            System.out.print("Nhập GPA học sinh số " + (i + 1) + " là ");
+            System.out.print("GPA of student " + (i + 1) + " is ");
             float point = scr.nextFloat();
 
             scr.nextLine();
@@ -37,11 +56,8 @@ public class StudentManagement {
         }
         return students;
     }
-    public void setStudents(Student[] Students) {
 
-    }
-
-    //Tìm số người qua
+    //Finding the student pass the exam
     public int totalStudentPass() {
         int numPass = 0;
         for (int i = 0; i < students.length; i++) {
@@ -52,8 +68,7 @@ public class StudentManagement {
         return numPass;
     } 
 
-    //Tìm số người rớt
-    //Dấu chấm than trước student để nó hiểu là ngược lại  (False)
+    //Finding the student fail the exam
     public int totalStudentFail() {
         int numFail = 0;
         for (int i = 0; i < students.length; i++) {
@@ -64,7 +79,7 @@ public class StudentManagement {
         return numFail;
     }
 
-    //Tìm sinh viên có điểm cao nhất
+    //Student own the highest point
     public Student studentHighPoint() {
         float curHighPoint = 0f;
         int indexHighPoint = 0;
@@ -78,7 +93,7 @@ public class StudentManagement {
         return students[indexHighPoint];
     }
 
-    //Tìm sinh viên có điểm thấp nhất
+    //Student own the lowest point
     public Student studentLowPoint() {
         float curLowPoint = 9999999f;
         int indexLowPoint = 0;

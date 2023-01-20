@@ -1,4 +1,4 @@
-package Core.BuoiBonus.ExtraExcercise.BaiTap2.Model;
+package Core.BuoiBonus.BaiTap2.Model;
 
 public class People {
     private String name;

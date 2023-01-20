@@ -1,10 +1,10 @@
-package Core.BuoiBonus.ExtraExcercise.BaiTap2.Service;
+package Core.BuoiBonus.BaiTap2.Service;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-import Core.BuoiBonus.ExtraExcercise.BaiTap2.Model.Student;
+import Core.BuoiBonus.BaiTap2.Model.Student;
 
 public class StudentService implements GeneralService<Student> {
 

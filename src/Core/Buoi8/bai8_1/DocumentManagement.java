@@ -5,10 +5,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class DocumentManagement {
-    List<Document> documents;
+    List<Document> documents = new ArrayList<>();
 
     public DocumentManagement() {}
-
     public DocumentManagement(List<Document> documents) {
         this.documents = new ArrayList<>();
         this.documents = documents;
@@ -18,12 +17,13 @@ public class DocumentManagement {
     public List<Document> getDocuments() {
         return documents;
     }
-
-    public void setDocuments(List<Document> documents) {this.documents = documents;}
+    public void setDocuments(List<Document> documents) {
+        this.documents = documents;
+    }
 
     public List<Document> addDocuments() {
         Scanner scr = new Scanner(System.in);
-        System.out.println("Input type of document(book/ journal/ newspaper): ");
+        System.out.print("Input type of document(book/ journal/ newspaper): ");
         String typeDocument = scr.nextLine();
 
         System.out.print("Input ID: ");
@@ -35,35 +35,33 @@ public class DocumentManagement {
         System.out.print("Input release number: ");
         int releaseNum = scr.nextInt();
 
-        switch (typeDocument) {
-            case ("book"):
-                scr.nextLine();
-                System.out.println("Input author: ");
-                String author = scr.nextLine();
+        if (typeDocument.equalsIgnoreCase("book")) {
+            scr.nextLine();
+            System.out.print("Input author: ");
+            String author = scr.nextLine();
 
-                System.out.println("Input number of page: ");
-                int numPage = scr.nextInt();
+            System.out.print("Input number of page: ");
+            int numPage = scr.nextInt();
 
-                Book books = new Book(id, publisher, releaseNum, author, numPage);
-                documents.add(books);
-                break;
-            case ("journal"):
-                System.out.println("Input issue number: ");
-                int issueNum = scr.nextInt();
-                
-                System.out.println("Input month issue: ");
-                int monthIssue = scr.nextInt();
+            Document book = new Book(id, publisher, releaseNum, author, numPage);
+            documents.add(book);
+        }
+        else if (typeDocument.equalsIgnoreCase("journal")) {
+            System.out.print("Input issue number: ");
+            int issueNum = scr.nextInt();
+            
+            System.out.print("Input month issue: ");
+            int monthIssue = scr.nextInt();
 
-                Journal journals = new Journal(id, publisher, releaseNum, issueNum, monthIssue);
-                documents.add(journals);
-                break;
-            case ("newspaper"):
-                System.out.println("Input day issue: ");
-                int dayIssue = scr.nextInt();
+            Document journal = new Journal(id, publisher, releaseNum, issueNum, monthIssue);
+            documents.add(journal);
+        }
+        else if (typeDocument.equalsIgnoreCase("newspaper")) {
+            System.out.print("Input day issue: ");
+            int dayIssue = scr.nextInt();
 
-                Newspaper newspapers = new Newspaper(id, publisher, releaseNum, dayIssue);
-                documents.add(newspapers);
-                break;
+            Document newspaper = new Newspaper(id, publisher, releaseNum, dayIssue);
+            documents.add(newspaper);
         }
         return documents;
     }
@@ -72,39 +70,29 @@ public class DocumentManagement {
         for (int i = 0; i < documents.size(); i++) {
             Document a = documents.get(i);
             if (a instanceof Book) {
-                Book b = (Book)a;
-                System.out.println("ID: " + b.getId() + 
-                "name of publisher: " + b.getPublisher() + 
-                "release day: " + b.getReleaseNum() + 
-                "Author: " + b.getAuthor() + 
-                "Number of page: " + b.getNumPage());
+                Book b = (Book) a;
+                System.out.println(b.toString());
             } else if (documents.get(i) instanceof Journal) {
-                Journal b = (Journal)a;
-                System.out.println("ID: " + b.getId() + 
-                "name of publisher: " + b.getPublisher() + 
-                "release day: " + b.getReleaseNum() + 
-                "issue number: " + b.getIssueNum() + 
-                "month issue" + b.getMonthIssue());
+                Journal b = (Journal) a;
+                System.out.println(b.toString());
             } else if (documents.get(i) instanceof Newspaper) {
-                Newspaper b = (Newspaper)a;
-                System.out.println("ID: " + b.getId() + 
-                "name of publisher: " + b.getPublisher() + 
-                "release day: " + b.getReleaseNum() + 
-                "day issue: " + b.getDayIssue());
+                Newspaper b = (Newspaper) a;
+                System.out.println(b.toString());
             }
         }
     }
 
     public String deleteDocument() {
         Scanner scr = new Scanner(System.in);
-        System.out.println("Input ID document which you wanna remove: ");
+        System.out.print("Input ID document which you wanna remove: ");
         String id = scr.nextLine();
+        int flag = 5;
         for (int i = 0; i < documents.size(); i++) {
-            if (id == documents.get(i).getId()) {
+            if (id.equalsIgnoreCase(documents.get(i).getId())) {
                 documents.remove(i);
             }
         }
-        return "Your document id" + id + "removed";
+        return "Your document id " + id + " removed " + flag;
     }
 
     public void searchType() {
@@ -117,12 +105,8 @@ public class DocumentManagement {
                 for (int i = 0; i < documents.size(); i++) {
                     Document a = documents.get(i);
                     if (a instanceof Book) {
-                        Book b = (Book)a;
-                        System.out.println("ID: " + b.getId() + 
-                        "name of publisher: " + b.getPublisher() + 
-                        "release day: " + b.getReleaseNum() + 
-                        "Author: " + b.getAuthor() + 
-                        "Number of page: " + b.getNumPage());
+                        Book b = (Book) a;
+                        System.out.println(b.toString());
                     }
                 }
                 break;
@@ -131,12 +115,8 @@ public class DocumentManagement {
                 for (int i = 0; i < documents.size(); i++) {
                     Document a = documents.get(i);
                     if (documents.get(i) instanceof Journal) {
-                        Journal b = (Journal)a;
-                        System.out.println("ID: " + b.getId() + 
-                        "name of publisher: " + b.getPublisher() + 
-                        "release day: " + b.getReleaseNum() + 
-                        "issue number: " + b.getIssueNum() + 
-                        "month issue" + b.getMonthIssue());
+                        Journal b = (Journal) a;
+                        System.out.println(b.toString());
                     }
                 }    
                 break;
@@ -145,11 +125,8 @@ public class DocumentManagement {
                 for (int i = 0; i < documents.size(); i++) {
                     Document a = documents.get(i);
                     if (documents.get(i) instanceof Newspaper) {
-                        Newspaper b = (Newspaper)a;
-                        System.out.println("ID: " + b.getId() + 
-                        "name of publisher: " + b.getPublisher() + 
-                        "release day: " + b.getReleaseNum() + 
-                        "day issue: " + b.getDayIssue());
+                        Newspaper b = (Newspaper) a;
+                        System.out.println(b.toString());
                     }
                 break;
                 }

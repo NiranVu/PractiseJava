@@ -1,37 +1,10 @@
-package Core.BuoiBonus.ExtraExcercise.BaiTap1;
+package Core.BuoiBonus.BaiTap1;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Baitap1 {
-    // public static void main(String[] args) {
-    //     int choice = -1;
-    //     Scanner input = new Scanner(System.in);
-    //     while (choice != 0) {
-    //         System.out.println("Menu");
-    //         System.out.println("1. draw the trigangle");
-    //         System.out.println("2. draw the square");
-    //         System.out.println("0. exit");
-    //         choice = input.nextInt();
-    //         switch (choice) {
-    //             case 1:
-    //                 System.out.println("Draw the triangle");
-    //                 System.out.println("****");
-    //                 System.out.println("***");
-    //                 System.out.println("**");
-    //                 System.out.println("*");
-    //                 break;
-    //             case 2:
-    //                 System.out.println("draw the square");
-    //                 System.out.println("* * * *");
-    //                 System.out.println("* * * *");
-    //                 System.out.println("* * * *");
-    //                 System.out.println("* * * *");
-
-    //         }
-    //     }
-    // }
 
     public static void main(String[] args) {
         List<Student> studentList = new ArrayList<>();

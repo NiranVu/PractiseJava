@@ -1,6 +1,16 @@
 package Core.Buoi5;
 
 public class Student {
+
+    // - Các thuộc tính:
+    // + name
+    // + gpa
+
+    // - Các phương thức"
+    // + Khởi tạo, getters/setters.
+    // + Kiểm tra đỗ/trượt (gpa >=1.5 thì đỗ, ngược lại thì trượt).
+    // + In ra thông tin name, gpa.
+
     private String nameStudent;
     private float gpa;
     
@@ -19,22 +29,21 @@ public class Student {
 
     }
     
-    //Khởi tạo
+    //Constructor
     public Student() {}
     public Student(String nameStudent, float gpa) {
         this.nameStudent = nameStudent;
         this.gpa = gpa;
     }
 
-    //check đỗ/rớt
+    //check pass/fail
     public Boolean checkPass() {
         return gpa >= 1.5f;
     }
     
-    //In ra thông tin
-    public String printInformation() {
-        return "Bạn là " + nameStudent + " có điểm = " + gpa;
+    @Override
+    public String toString() {
+        return "your name: " + nameStudent + 
+                ", your GPA: " + gpa;
     }
-    
-    
 }

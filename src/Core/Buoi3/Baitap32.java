@@ -1,22 +1,30 @@
 package Core.Buoi3;
-//Viết chương trình chuyển số thập phân ra số nhị phân
-
 
 import java.util.Scanner;
 
 public class Baitap32 {
+
+    // Write a Java program to convert a decimal number to binary number
+    // Input Data: User input a decimal number
+    // Output: Print result of that number in binary
+
+    // Example:
+    // Input a Decimal Number : 5
+    // Expected Output
+    // Binary number is: 101
+
     public static void main(String[] args) {
-        // Nhập giá trị
+        //Input
         Scanner scr = new Scanner(System.in);
-        System.out.print("Nhập giá trị muốn đổi = ");
-        int n = scr.nextInt();
+        System.out.print("Input value wanna change = ");
+        int val = scr.nextInt();
         
-        //Bắt đầu làm
-        int bi;
-        while (n > 0) {
-            bi = n % 2;
-            System.out.print(bi);
-            n /= 2;
+        //Calculate
+        int binaryVal;
+        while (val > 0) {
+            binaryVal = val % 2;
+            System.out.print(binaryVal);
+            val /= 2;
         }
     }
 }

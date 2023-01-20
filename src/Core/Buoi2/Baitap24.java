@@ -1,18 +1,22 @@
 package Core.Buoi2;
 
 import java.util.Scanner;
-// Nhập n từ bàn phím. Tính tổng từ 1 đến n sau đó tính trung bình
 public class Baitap24 {
+
+    // Write a Java program to input a number n, print to screen the sum and average of 1-n.
+    // int sum = 1+2+...+n;
+    // float avg = (float)(1+2+...+n)/n;
+
     public static void main(String[] args) {
-        //Nhập số n
+        //Input n
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Nhập số n");
+        System.out.println("Input n");
         int n = scanner.nextInt();
-        //Bắt đầu tính tổng các số cần xài for đỡ phải xài công thức
-        int a = (n * (1 + n)) / 2;
-        System.out.println(a);
-        //tính trung bình
-        float b = (float) a / n;
-        System.out.println("trung bình = " +b);
+
+        //Calculation following formula
+        int sumStackValue = (n * (1 + n)) / 2; //formula follow arithmetic progression
+        System.out.println(sumStackValue);
+        float averageSumVal = (float) sumStackValue / n;  //changing type of value
+        System.out.println("Average value = " + averageSumVal);
     }
 }

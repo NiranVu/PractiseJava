@@ -3,21 +3,27 @@ package Core.Buoi4;
 import java.util.Scanner;
 
 public class Baitap42 {
+
+    // Write a Java program to remove the duplicate elements of a given array and return the new length of the array.
+    // Input: [20, 20, 30, 40, 50, 50, 50]
+    // Expect Output:
+    // After removing the duplicate elements the program should return 4 as the new length of the array
+
     static int[] addValueArray(int[] a) {
-        //Thêm giá trị vào mảng
+        //Add value into array
         for (int i = 0; i < a.length; i++) {
 
             Scanner scr = new Scanner(System.in);
-            System.out.print("Nhập giá trị = ");
-            int u = scr.nextInt();
+            System.out.print("Input value = ");
+            int val = scr.nextInt();
 
-            a[i] = u;
+            a[i] = val;
         }
         return a;
     }
 
     static int[] bubbleSort(int [] a) {
-        //sắp xếp mảng bubbleSort
+        //Sort array
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < a.length; j++) {
                 int temp = a[i];
@@ -31,54 +37,51 @@ public class Baitap42 {
     }
 
     static int[] removeDuplicate(int[] a, int n) {
-        int j = 0;
         int [] b = new int[n];
-        for (int i = 0; i < a.length - 1; i++) {
-            if (a[i] != a[i +1]) {
-                b[j] = a[i];
+        int j = 0;
+        b[0] = a[0];
+        for (int i = 1; i < a.length; i++) {
+            if (b[j] != a[i]) {
                 j++;
+                b[j] = a[i];
             }
         }
 
-        if (b[j] != a[a.length - 1]) {
-            b[j] = a[a.length - 1];
-            j++;
-        }
-
-        int[] c = new int[j];
-        for (int i = 0; i < j; i++) {
+        int[] c = new int[j + 1];
+        for (int i = 0; i <= j; i++) {
             c[i] = b[i];
         }
         return c;
     }
 
     public static void main(String[] args) {
-        //Nhập độ lớn của mảng
+        //Input the length of array
         Scanner scr1 = new Scanner(System.in);
-        System.out.print("Nhập số giá trị mong muốn = ");
+        System.out.print("Length of array = ");
         int n = scr1.nextInt();
 
-        //Tạo mảng
+        //Add value into array
         int[] array1 = new int[n];
         addValueArray(array1);
 
-        //Sắp xếp mảng
+
+        //Sort array
         bubbleSort(array1);
 
-        //Loại bỏ duplicate
-        int[] array2 = removeDuplicate(array1, n);
+        //remove duplicate in array
+        int[] array2 = removeDuplicate(array1, array1.length);
 
-        //Kiểm tra mảng
+        //Check result
+        System.out.println("Original array");
         for (int i : array1) {
             System.out.print(i + " ");
         }
-
         System.out.println("");
-
+        System.out.println("Result array");
         for (int i : array2) {
             System.out.print(i + " ");
         }
-        System.out.println(" ");
-        System.out.println(array2.length);
+        System.out.println("");
+        System.out.println("length of result array: " + array2.length);
     }
 }

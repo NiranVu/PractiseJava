@@ -3,23 +3,23 @@ package Core.Buoi5;
 import java.util.Scanner;
 
 public class MainRectangle {
+    // - Viết lớp Test để test thử. (width và height nhập từ bàn phím)
     public static void main(String[] args) {
-        //Nhập chiều dài
-        Scanner scr1 = new Scanner(System.in);
-        System.out.print("Nhập chiều dài = ");
-        int w = scr1.nextInt();
+        //Input the height
+        Scanner scr = new Scanner(System.in);
+        System.out.print("Input the height = ");
+        int h = scr.nextInt();
 
-        //Nhập chiều rộng
-        Scanner scr2 = new Scanner(System.in);
-        System.out.print("Nhập chiều cao = ");
-        int h = scr2.nextInt();
+        //input the width
+        System.out.print("input the width = ");
+        int w = scr.nextInt();
 
         Rectangle test1 = new Rectangle(w, h);
 
-        System.out.println("Xuất ra kết quả hình" + test1.toPrint());
-        System.out.println("diện tích = " + test1.area());
-        System.out.println("Chi vi = " + test1.perimeter());
-        System.out.println("Kiểm tra hình vuông = " + test1.checkSquare());
+        System.out.println("Show the result" + test1.toPrint());
+        System.out.println("Area = " + test1.area());
+        System.out.println("perimeter = " + test1.perimeter());
+        System.out.println("Check the square = " + test1.checkSquare());
 
     }
     

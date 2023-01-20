@@ -1,8 +1,9 @@
 package Core.Buoi8.bai8_1;
 
 public class Journal extends Document {
-    int issueNum;  // Số phát hành
-    int monthIssue;  //Tháng phát hành
+
+    int issueNum;
+    int monthIssue;
 
     public Journal() {}
     public Journal(String id, String publisher, int releaseNum, int issueNum, int monthIssue) {
@@ -17,7 +18,6 @@ public class Journal extends Document {
     public int getIssueNum() {
         return issueNum;
     }
-
     public void setAuthor(int issueNum) {
         this.issueNum = issueNum;
     }
@@ -25,8 +25,17 @@ public class Journal extends Document {
     public int getMonthIssue() {
         return monthIssue;
     }
-
     public void setMonthIssue(int monthIssue) {
         this.monthIssue = monthIssue;
+    }
+
+    @Override
+    public String toString() {
+        return "id: " + id +
+                ", publisher: " + publisher +
+                ", release number: " + releaseNum +
+                ", issue number: " + issueNum +
+                ", issue month: " + monthIssue
+        ;
     }
 }

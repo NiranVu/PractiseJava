@@ -3,8 +3,9 @@ package Core.Buoi8.bai8_1;
 import javax.security.sasl.AuthorizeCallback;
 
 public class Book extends Document {
-    String author;  //Tác giả
-    int numPage;  //Số trang
+
+    String author;
+    int numPage;
 
     public Book() {}
     public Book(String id, String publisher, int releaseNum, String author, int numPage) {
@@ -32,4 +33,13 @@ public class Book extends Document {
         this.numPage = numPage;
     }
 
+    @Override
+    public String toString() {
+        return "id: " + id +
+                ", publisher: " + publisher +
+                ", release number: " + releaseNum +
+                ", author: " + author +
+                ", page number: " + numPage
+        ;
+    }
 }

@@ -1,4 +1,4 @@
-package Core.BuoiBonus.ExtraExcercise.BaiTap2.Service;
+package Core.BuoiBonus.BaiTap2.Service;
 
 public interface GeneralService<T> {
     int findIndexById(int id);

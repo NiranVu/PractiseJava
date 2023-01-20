@@ -4,27 +4,17 @@ import java.util.Scanner;
 
 public class MainTestStudent {
     public static void main(String[] args) {
-        // //STUDENT
-        // //Tạo biến name
-        // Scanner scr1 = new Scanner(System.in);
-        // System.out.print("Tên của bạn là ");
-        // String name = scr1.nextLine();
-        // //Tạo biến gpa
-        // Scanner scr2 = new Scanner(System.in);
-        // System.out.print("Điểm của bạn = ");
-        // float point = scr2.nextFloat();
 
-        // Student Duc = new Student(name, point);
-        // System.out.println(Duc.checkPass());
-        // System.out.println("Thông tin của bạn là " + Duc.printInformation());
+    // + Nhập vào thông tin sinh viên.
+    // + In ra tổng số sinh viên đỗ.
+    // + In ra tổng số sinh viên trượt.
+    // + In ra thông tin sinh viên có điểm GPA cao nhất.
+    // + In ra thông tin sinh viên có điểm GPA thấp nhất.
 
-
-        //STUDENT MANAGEMENT
         StudentManagement lop1 = new StudentManagement(3);
-        System.out.println(lop1.getStudents());
-        System.out.println("Số sinh viên đậu là " + lop1.totalStudentPass());
-        System.out.println("Số sinh viên rớt là " + lop1.totalStudentFail());
-        System.out.println("Sinh viên điểm cao nhất là " + lop1.studentHighPoint().getNameStudent());
-        System.out.println("Sinh viên điểm thấp nhất là " + lop1.studentLowPoint().getNameStudent());
+        System.out.println("The number of student: " + lop1.totalStudentPass());
+        System.out.println("A number of fail student: " + lop1.totalStudentFail());
+        System.out.println("The highest point's student: " + lop1.studentHighPoint().toString());
+        System.out.println("The lowest point's student: " + lop1.studentLowPoint().toString());
     }
 }

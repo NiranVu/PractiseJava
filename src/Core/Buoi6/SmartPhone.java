@@ -3,8 +3,23 @@ package Core.Buoi6;
 import java.util.Scanner;
 
 public class SmartPhone {
+
+    // 1.1 Các thuộc tính:
+    // - String brand (Thương hiệu Samsung, Apple, Sony...)
+    // - boolean hasBluetooth (Có Bluetooth hay ko)
+    // - boolean has5G (Có 5G hay ko)
+    // - boolean hasWifi (Có wifi hay ko)
+    // - String os (Hệ điều hành)
+    // - float memory (Bộ nhớ GB)
+    // - String color (Màu)
+    // - long price (Giá bán)
+    // - int totalSold (Tổng số đã bán được)
+    // 1.2 Các phương thức
+    // - Khởi tạo, getter/setters
+    // - Ghi đè lại toString để trả về thông tin chi tiết các thuộc tính.
+
     private String branch;
-    private boolean hasBuetooth;
+    private boolean hasBluetooth;
     private boolean has5G;
     private boolean hasWifi;
     private String os;
@@ -13,11 +28,11 @@ public class SmartPhone {
     private long price;
     private int totalSold; //tổng số bản được
 
+    //Constructor
     public SmartPhone() {}
-
-    public SmartPhone(String branch, boolean hasBuetooth, boolean has5G, boolean hasWifi, String os, float memory, String color, long price, int totalSold) {
+    public SmartPhone(String branch, boolean hasBluetooth, boolean has5G, boolean hasWifi, String os, float memory, String color, long price, int totalSold) {
         this.branch = branch;
-        this.hasBuetooth = hasBuetooth;
+        this.hasBluetooth = hasBluetooth;
         this.has5G = has5G;
         this.hasWifi = hasWifi;
         this.os = os;
@@ -35,15 +50,15 @@ public class SmartPhone {
         this.branch = branch;
     }
 
-    public boolean isHasBuetooth() {
-        return hasBuetooth;
+    public boolean getHasBluetooth() {
+        return hasBluetooth;
     }
 
-    public void setHasBuetooth(boolean hasBuetooth) {
-        this.hasBuetooth = hasBuetooth;
+    public void setHasBluetooth(boolean hasBluetooth) {
+        this.hasBluetooth = hasBluetooth;
     }
 
-    public boolean isHas5G() {
+    public boolean getHas5G() {
         return has5G;
     }
 
@@ -51,7 +66,7 @@ public class SmartPhone {
         this.has5G = has5G;
     }
 
-    public boolean isHasWifi() {
+    public boolean getHasWifi() {
         return hasWifi;
     }
 
@@ -100,15 +115,15 @@ public class SmartPhone {
     @Override
     public String toString() {
         return "smartPhone{" +
-                "branch='" + getBranch() + '\'' +
-                ", hasBuetooth=" + isHasBuetooth() +
-                ", has5G=" + isHas5G() +
-                ", hasWWifi=" + isHasWifi() +
-                ", os='" + getOs() + '\'' +
-                ", memory=" + getMemory() +
-                ", color='" + getColor() + '\'' +
-                ", price=" + getPrice() +
-                ", totalSold=" + getTotalSold() +
+                "branch='" + branch + '\'' +
+                ", hasBuetooth=" + hasBluetooth +
+                ", has5G=" + has5G +
+                ", hasWWifi=" + hasWifi +
+                ", os='" + os + '\'' +
+                ", memory=" + memory +
+                ", color='" + color + '\'' +
+                ", price=" + price +
+                ", totalSold=" + totalSold +
                 '}';
     }
 }

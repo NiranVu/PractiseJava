@@ -1,8 +1,20 @@
 package Core.Buoi5;
 
 public class Rectangle {
+    // Viết lớp Rectangle có:
+    // - Các thuộc tính:
+    // + width
+    // + height
+    // - Các phương thức:
+    // + Khởi tạo
+    // + Getters/Setters
+    // + Tính chu vi
+    // + Tính hiện tích
+    // + In ra width, height
+    // + Kiểm tra xem có là hình vuông không.
 
-    //Các thuộc tính
+
+    //Attribute
     private int width;
     private int height;
 
@@ -15,6 +27,7 @@ public class Rectangle {
             this.width = width;
         }
     }
+
     public int getHeight() {
         return height;
     }
@@ -24,7 +37,7 @@ public class Rectangle {
         }
     }
 
-    //Khởi tạo
+    //Construction
     public Rectangle() {
     }
     public Rectangle(int width, int height) {
@@ -32,29 +45,34 @@ public class Rectangle {
         this.width = width;
     }
 
-    //Tính chu vi
+    //method
+    //Calculate the perimeter
     public int perimeter() {
         return 2 * (width + height);
     }
-    //Tính diện tích
+    //calculate the area
     public int area() {
         return width * height;
     }
 
-    //Kiểm tra phải hình vuông không
+    //Check the square
     // public Boolean checkSquare() {
     //     return width == height;
     // }
 
     public String checkSquare() {
         if (width == height) {
-            return "Đây là hình vuông";
+            return "This is the square";
         } else {
-            return "Đây không phải hình vuông";
+            return "This is not the square";
         }
     }
-    //Xem kết quả
+    //
     public String toPrint() {
-        return "retangle have" + "[width = " + width + ", height = " + height + "]";
+        return "retangle have" + 
+                "[ " + 
+                "width = " + width + 
+                ", height = " + height + 
+                " ]";
     }
 }

@@ -3,13 +3,21 @@ package Core.Buoi7;
 import java.util.Scanner;
 
 public class EmployeeManagement {
+
+    // 4. Viết lớp EmployeeManagement để quản lý nhân viên. Lớp này gồm có:
+    // 4.1 Các thuộc tính:
+    // int n; (tổng số nhân viên)
+    // Employee[] employees; (Mảng danh sách nhân viên)
+    // 4.2 Các phương thức:
+    // Khởi tạo với đối số truyền vào là tổng số nhân viên cần quản lý n
+    // Nhập thông tin cho từng nhân viên (Khi nhập thì đưa ra lựa chọn để nhập nhân viên fulltime, parttime)
+    // Tìm nhân viên có tiền lương cao nhất/thấp nhất.
+
     int totalEmployee;  // Tổng số nhân viên
     Employee[] employees;  //Danh sách nhân viên
 
     public EmployeeManagement() {}
-
     public EmployeeManagement(int totalEmployee) {
-
         this.totalEmployee = totalEmployee;
         employees = new Employee[totalEmployee];
     }
@@ -29,10 +37,10 @@ public class EmployeeManagement {
             System.out.print("Employee's identification Number : ");
             String identificationNumber = scr.nextLine();
 
-            System.out.print("Employee's type (full time/ part time): ");
+            System.out.print("Employee's type (fulltime/ partime): ");
             String checkTypeEmployee = scr.nextLine();
 
-            if (checkTypeEmployee == "full time") {
+            if (checkTypeEmployee.equalsIgnoreCase("fulltime")) {
                 System.out.print("Employee's daily salary: ");
                 long dailySalary = scr.nextLong();
 

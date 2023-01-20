@@ -1,4 +1,4 @@
-package Core.BuoiBonus.ExtraExcercise.BaiTap1;
+package Core.BuoiBonus.BaiTap1;
 
 public class Student extends People{
     private int point;
