@@ -1,7 +1,7 @@
 package Core.Buoi2;
 
 import java.util.Scanner;
-// Nhập số từ bàn phím tính n + nn + nnn
+
 public class Baitap22 {
 
     // Write a Java program that accepts an integer (n) and computes the value of n + nn + nnn

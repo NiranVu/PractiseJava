@@ -1,7 +1,7 @@
 package Core.Buoi2;
 
 import java.util.Scanner;
-// Viết chương trình tính tích không được dùng dấu nhân
+
 public class Baitap25 {
 
     // Write a Java program to multiply two given integer numbers without using the multiply operator(*)
